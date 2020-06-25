@@ -2,37 +2,84 @@
 <html>
 
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;600&family=Noto+Serif&family=Odibee+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>RPG</title>
   </head>
 
   <body>
-    <form id="character-creation">
-      <div class="form-group">
-        <label for="name">Enter Character Name</label>
-        <input id="name" type="text" class="form-control">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Sci-fi RPG</h1>
       </div>
-      <div class="form-group">
-        <h3>Select Class:</h3>
-        <select class="form-control" id="profile">
-          <option>Thug</option>
-          <option>Hacker</option>
-          <option>Gun Slinger</option>
-        </select>
-        <h3>Select Weapon:</h3>
-        <select class="form-control" id="weapon">
-          <option>Power Fist</option>
-          <option>Key Board</option>
-          <option>USB Rifle</option>
-        </select>
-        <h3>Select Armor:</h3>
-        <select class="form-control" id="armor">
-          <option>Old Tire Armor</option>
-          <option>Scrap Metal Armor</option>
-          <option>Power Armor</option>
-        </select>
-      </div>
-      <button id="submit" class="btn-danger">Create Character</button>
-    </form>
+      <form id="character-creation">
+        <div class="form-group">
+          <label for="name">Enter Character Name</label>
+          <input id="name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="profile">Select a Profile</label>
+          <select class="form-control" id="profile">
+            <option>Thug</option>
+            <option>Hacker</option>
+            <option>Gun Slinger</option>
+          </select>
+          <label for="weapon">Choose a Weapon</label>
+          <select class="form-control" id="weapon">
+            <option>Power Fist</option>
+            <option>Key Board</option>
+            <option>USB Rifle</option>
+          </select>
+          <label for="armor">Choose your Armor</label>
+          <select class="form-control" id="armor">
+            <option>Old Tire Armor</option>
+            <option>Scrap Metal Armor</option>
+            <option>Power Armor</option>
+          </select>
+        </div>
+        <button id="submit" class="btn-danger">Create Character</button>
+      </form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div id="characterDisplay">
+              <p>Name: <span id="currentName"></span></p>
+              <p>Profile: <span id="currentProfile"></span></p>
+              <p><span id="currentInventory"></span></p>
+              <p><span id="currentStats"></span></p>
+              <p>Experience: <span id="currentExperience"></span></p>
+            </div>
+            <div id="inventoryDisplay">
+              <p>Weapon: <span id="currentWeapon"></span></p>
+              <p>Armor: <span id="currentArmor"></span></p>
+              <p>Trinket: <span id="currentTrinket"></span></p>
+              <p>Consumable: <span id="currentConsumable"></span></p>
+              <p><span class="returnFromScreen"></span></p>
+            </div>
+            <div id="statDisplay">
+              <p>Health: <span id="currentHealth"></span></p>
+              <p>Defense: <span id="currentDefense"></span></p>
+              <p>Strength: <span id="currentStrength"></span></p>
+              <p>Speed: <span id="currentSpeed"></span></p>
+              <p><span class="returnFromScreen"></span></p>
+            </div>
+          </div>
+          <br>
+          <div id="actions">
+            <button id="attack-button">Attack</button>
+            <button id="heal-button">Heal</button>
+          </div>
+        </div>
+        <div class="col-md-6" id="enemyInfo">
+          <div class="card">
+            <div id="enemyDisplay">
+              <h4>Monster</h4>
+              <p>Health: <span id="enemyHealth"></span></p>
+              <p>Strength: <span id="enemyStrength"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
   </body>
 
 </html>

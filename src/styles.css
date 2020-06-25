@@ -1,1 +1,22 @@
-/* Some CSS! */
+#inventoryDisplay, #statDisplay, #characterDisplay, #enemyInfo, #actions {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background-image: url(../img/space-pixel.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Noto Serif', serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
+  padding: 50px;
+  margin-top: 50px;
+  border-radius: 3px;
+}
